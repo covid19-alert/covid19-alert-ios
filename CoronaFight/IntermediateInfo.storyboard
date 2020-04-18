@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwE-Fb-RPc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Intermediate Info View Controller-->
+        <scene sceneID="yX6-E7-dVg">
+            <objects>
+                <viewController storyboardIdentifier="IntermediateInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zwE-Fb-RPc" customClass="IntermediateInfoViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="IntermediateInfoViewController" id="xZ1-DO-Svx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="TnO-yK-Z6K">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IrE-3U-rjO">
+                                        <rect key="frame" x="32" y="32" width="350" height="570"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybC-Cp-vTh">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qsR-PN-LsX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EWk-jg-F6d">
+                                                <rect key="frame" x="0.0" y="40" width="350" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result of self-assessment won't influence Risk measurement" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78T-j4-LQU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
+                                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="S3T-Yh-noN">
+                                                <rect key="frame" x="0.0" y="92" width="350" height="478"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVY-6f-M0n">
+                                        <rect key="frame" x="32" y="634" width="350" height="60"/>
+                                        <color key="backgroundColor" name="buttonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="bVs-Qk-P9x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" name="buttonTextWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="continueAction:" destination="zwE-Fb-RPc" eventType="touchUpInside" id="CYo-N7-1f2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzW-WR-4UM">
+                                        <rect key="frame" x="32" y="726" width="350" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="pJu-Nz-Kk4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" name="buttonTextBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="zwE-Fb-RPc" eventType="touchUpInside" id="THr-Kn-bLJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="32" bottom="32" trailing="32"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TnO-yK-Z6K" firstAttribute="top" secondItem="BiW-gC-jcB" secondAttribute="top" id="3g2-U0-q91"/>
+                            <constraint firstItem="TnO-yK-Z6K" firstAttribute="trailing" secondItem="BiW-gC-jcB" secondAttribute="trailing" id="Fzg-vx-bS0"/>
+                            <constraint firstItem="TnO-yK-Z6K" firstAttribute="bottom" secondItem="BiW-gC-jcB" secondAttribute="bottom" id="Him-Qx-3gR"/>
+                            <constraint firstItem="TnO-yK-Z6K" firstAttribute="leading" secondItem="BiW-gC-jcB" secondAttribute="leading" id="Otu-1y-BYP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BiW-gC-jcB"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="NzW-WR-4UM" id="C1S-Y9-phF"/>
+                        <outlet property="continueButton" destination="rVY-6f-M0n" id="RZf-1j-2vN"/>
+                        <outlet property="noteHeader" destination="ybC-Cp-vTh" id="5Qz-rZ-EiX"/>
+                        <outlet property="noteText" destination="78T-j4-LQU" id="4Sm-X9-LRa"/>
+                        <segue destination="QG9-dB-Y2X" kind="show" identifier="WebViewSegueAnimated" id="3MQ-Yu-vE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORZ-NT-G2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="53"/>
+        </scene>
+        <!--WebViewController-->
+        <scene sceneID="bNw-0W-W6w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WebView" referencedIdentifier="WebViewController" id="QG9-dB-Y2X" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ts2-GB-MMt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMp-yf-2ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="0.29800000786781311" green="0.27099999785423279" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonTextBlue">
+            <color red="0.29800000786781311" green="0.27099999785423279" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonTextWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

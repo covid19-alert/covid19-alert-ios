@@ -1,0 +1,14 @@
+/* Bundle name */
+"CFBundleName" = "Covid19 Alert";
+/* Privacy - Bluetooth Always Usage Description */
+"NSBluetoothAlwaysUsageDescription" = "We need your bluetooth to scan other users presence";
+/* Privacy - Bluetooth Peripheral Usage Description */
+"NSBluetoothPeripheralUsageDescription" = "We need your bluetooth to scan other users presence";
+/* Privacy - Location Always and When In Use Usage Description */
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "We need your location to scan other users presence";
+/* Privacy - Location Always Usage Description */
+"NSLocationAlwaysUsageDescription" = "We need your location to scan other users presence";
+/* Privacy - Location Usage Description */
+"NSLocationUsageDescription" = "We need your location to scan other users presence";
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "We need your location to scan other users presence";

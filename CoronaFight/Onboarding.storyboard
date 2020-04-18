@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6BR-LR-VAx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="v3m-lQ-gmM">
+            <objects>
+                <viewController id="5d4-4V-G42" customClass="OnboardingViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9VU-PB-2aP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOR-u2-MHt">
+                                <rect key="frame" x="324" y="772" width="70" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="OcF-98-Nv8"/>
+                                    <constraint firstAttribute="width" secondItem="uOR-u2-MHt" secondAttribute="height" multiplier="1:1" id="tDn-D4-EGT"/>
+                                </constraints>
+                                <color key="tintColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Register" image="onboarding_button">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onboardingNextButtonAction:" destination="5d4-4V-G42" eventType="touchUpInside" id="9of-Oa-YJq"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-f9-lOD">
+                                <rect key="frame" x="195.5" y="788.5" width="23" height="37"/>
+                                <color key="pageIndicatorTintColor" name="lowRiskBg"/>
+                                <color key="currentPageIndicatorTintColor" name="lowRiskMeter"/>
+                            </pageControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sg-Sg-Nc8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="674"/>
+                                <connections>
+                                    <segue destination="K36-AH-wtx" kind="embed" id="J2m-gR-7jn"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Nb-8c-ljE" firstAttribute="bottom" secondItem="8Sg-Sg-Nc8" secondAttribute="bottom" constant="100" id="1Fb-vx-Dr9"/>
+                            <constraint firstItem="8Sg-Sg-Nc8" firstAttribute="top" secondItem="1Nb-8c-ljE" secondAttribute="top" id="FI9-A7-xpd"/>
+                            <constraint firstItem="GNE-f9-lOD" firstAttribute="centerX" secondItem="1Nb-8c-ljE" secondAttribute="centerX" id="FP8-zw-jaT"/>
+                            <constraint firstItem="1Nb-8c-ljE" firstAttribute="bottom" secondItem="uOR-u2-MHt" secondAttribute="bottom" constant="20" id="Igg-wX-GAO"/>
+                            <constraint firstItem="8Sg-Sg-Nc8" firstAttribute="leading" secondItem="1Nb-8c-ljE" secondAttribute="leading" id="NPW-h3-dAf"/>
+                            <constraint firstItem="1Nb-8c-ljE" firstAttribute="trailing" secondItem="uOR-u2-MHt" secondAttribute="trailing" constant="20" id="Qnu-Pz-EqJ"/>
+                            <constraint firstItem="GNE-f9-lOD" firstAttribute="centerY" secondItem="uOR-u2-MHt" secondAttribute="centerY" id="aq1-eq-pnz"/>
+                            <constraint firstItem="1Nb-8c-ljE" firstAttribute="trailing" secondItem="8Sg-Sg-Nc8" secondAttribute="trailing" id="biM-GP-Ydc"/>
+                            <constraint firstItem="uOR-u2-MHt" firstAttribute="width" secondItem="uOR-u2-MHt" secondAttribute="height" multiplier="1:1" id="fSg-g3-gCK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Nb-8c-ljE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1bL-3X-kPs"/>
+                    <connections>
+                        <outlet property="onboardingButton" destination="uOR-u2-MHt" id="0n9-hl-rPx"/>
+                        <outlet property="pageControl" destination="GNE-f9-lOD" id="4Ii-Ln-esv"/>
+                        <segue destination="aBs-cw-t4H" kind="show" identifier="RegisterViewControllerStaticSeque" animates="NO" id="Tg8-Zm-MsU"/>
+                        <segue destination="aBs-cw-t4H" kind="show" identifier="RegisterViewControllerSeque" id="1sV-dS-ovY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZs-7b-x1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="-132.58928571428572"/>
+        </scene>
+        <!--Onboarding Screen View Controller-->
+        <scene sceneID="l2M-a8-uEr">
+            <objects>
+                <viewController storyboardIdentifier="id1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fqR-bs-pOb" customClass="OnboardingScreenViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAr-PE-trF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-sC-neH">
+                                <rect key="frame" x="20.5" y="126" width="373" height="654"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="ysw-GE-B8h">
+                                        <rect key="frame" x="25" y="16" width="323" height="261.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Feature 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0F-WL-N8H">
+                                        <rect key="frame" x="25" y="287.5" width="323" height="301"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC2-F7-3jY">
+                                        <rect key="frame" x="25" y="598.5" width="323" height="39.5"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ysw-GE-B8h" firstAttribute="height" relation="lessThanOrEqual" secondItem="rDx-sC-neH" secondAttribute="height" multiplier="0.4" id="Cy4-K6-8HX"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="25" bottom="16" trailing="25"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rDx-sC-neH" firstAttribute="centerX" secondItem="pgp-cR-eTh" secondAttribute="centerX" id="2Nb-ba-hAo"/>
+                            <constraint firstItem="rDx-sC-neH" firstAttribute="width" secondItem="pgp-cR-eTh" secondAttribute="width" multiplier="0.9" id="4n9-Os-V9P"/>
+                            <constraint firstItem="rDx-sC-neH" firstAttribute="centerY" secondItem="pgp-cR-eTh" secondAttribute="centerY" id="VUI-3g-rHA"/>
+                            <constraint firstItem="rDx-sC-neH" firstAttribute="height" relation="lessThanOrEqual" secondItem="pgp-cR-eTh" secondAttribute="height" multiplier="0.8" id="Wqp-5s-7g7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pgp-cR-eTh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fik-cC-QcB"/>
+                    <connections>
+                        <outlet property="featureDescriptionLabel" destination="HC2-F7-3jY" id="yvZ-T7-NTR"/>
+                        <outlet property="featureImageView" destination="ysw-GE-B8h" id="Xam-9e-x42"/>
+                        <outlet property="featureTitleLabel" destination="w0F-WL-N8H" id="FYx-S5-egK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAF-xu-K5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="-133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jr0-Pr-NHF">
+            <objects>
+                <navigationController storyboardIdentifier="RegisterNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="6BR-LR-VAx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dB9-PV-G4s">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5d4-4V-G42" kind="relationship" relationship="rootViewController" id="Sw6-3q-Rlx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Rm-CS-Xc6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1393" y="-133"/>
+        </scene>
+        <!--RegisterViewController-->
+        <scene sceneID="EKA-hE-gJk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" referencedIdentifier="RegisterViewController" id="aBs-cw-t4H" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bJj-id-OKA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVo-1K-QW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="-133"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="8C6-Lv-U7B">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="K36-AH-wtx" customClass="OnboardingPageViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmv-HY-D6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="-133"/>
+        </scene>
+        <!--Onboarding Screen View Controller-->
+        <scene sceneID="eYY-j7-Wb7">
+            <objects>
+                <viewController storyboardIdentifier="id2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CEO-kw-WL9" customClass="OnboardingScreenViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOa-Ox-laY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3R-Pn-cUj">
+                                <rect key="frame" x="20.5" y="126" width="373" height="654"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="NIF-lq-pSb">
+                                        <rect key="frame" x="25" y="16" width="323" height="261.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Feature 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-5f-QG6">
+                                        <rect key="frame" x="25" y="287.5" width="323" height="298.5"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVB-5Z-Adm">
+                                        <rect key="frame" x="25" y="596" width="323" height="42"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NIF-lq-pSb" firstAttribute="height" relation="lessThanOrEqual" secondItem="I3R-Pn-cUj" secondAttribute="height" multiplier="0.4" id="owq-IG-f9h"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="25" bottom="16" trailing="25"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="I3R-Pn-cUj" firstAttribute="width" secondItem="hnf-5E-k52" secondAttribute="width" multiplier="0.9" id="CfH-Fy-CnY"/>
+                            <constraint firstItem="I3R-Pn-cUj" firstAttribute="centerY" secondItem="hnf-5E-k52" secondAttribute="centerY" id="N8t-PC-0vD"/>
+                            <constraint firstItem="I3R-Pn-cUj" firstAttribute="centerX" secondItem="hnf-5E-k52" secondAttribute="centerX" id="Ss8-f6-gPX"/>
+                            <constraint firstItem="I3R-Pn-cUj" firstAttribute="height" relation="lessThanOrEqual" secondItem="hnf-5E-k52" secondAttribute="height" multiplier="0.8" id="cZU-cI-q3A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hnf-5E-k52"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="THz-pQ-ind"/>
+                    <connections>
+                        <outlet property="featureDescriptionLabel" destination="NVB-5Z-Adm" id="OKI-2Y-oeG"/>
+                        <outlet property="featureImageView" destination="NIF-lq-pSb" id="gMD-tH-cpD"/>
+                        <outlet property="featureTitleLabel" destination="bG0-5f-QG6" id="Dny-Ae-7cI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2Q-de-7qe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="-133"/>
+        </scene>
+        <!--Onboarding Screen View Controller-->
+        <scene sceneID="cZv-UK-pM6">
+            <objects>
+                <viewController storyboardIdentifier="id3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i9B-ba-ffc" customClass="OnboardingScreenViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lm8-gx-Dxc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c7R-fC-VoN">
+                                <rect key="frame" x="20.5" y="126" width="373" height="654"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="rlg-QD-6vb">
+                                        <rect key="frame" x="25" y="16" width="323" height="261.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Feature 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ch-wf-tDY">
+                                        <rect key="frame" x="25" y="287.5" width="323" height="298.5"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="led-zT-BvO">
+                                        <rect key="frame" x="25" y="596" width="323" height="42"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rlg-QD-6vb" firstAttribute="height" relation="lessThanOrEqual" secondItem="c7R-fC-VoN" secondAttribute="height" multiplier="0.4" id="lZu-d7-F8a"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="25" bottom="16" trailing="25"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c7R-fC-VoN" firstAttribute="centerY" secondItem="rFr-58-jo5" secondAttribute="centerY" id="5cc-C5-xeP"/>
+                            <constraint firstItem="c7R-fC-VoN" firstAttribute="height" relation="lessThanOrEqual" secondItem="rFr-58-jo5" secondAttribute="height" multiplier="0.8" id="Wld-lb-uOl"/>
+                            <constraint firstItem="c7R-fC-VoN" firstAttribute="width" secondItem="rFr-58-jo5" secondAttribute="width" multiplier="0.9" id="YTr-Ih-XOW"/>
+                            <constraint firstItem="c7R-fC-VoN" firstAttribute="centerX" secondItem="rFr-58-jo5" secondAttribute="centerX" id="ZGH-lC-bgg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rFr-58-jo5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ueu-3G-vy4"/>
+                    <connections>
+                        <outlet property="featureDescriptionLabel" destination="led-zT-BvO" id="8eA-xk-kb5"/>
+                        <outlet property="featureImageView" destination="rlg-QD-6vb" id="Cxh-Wx-7PL"/>
+                        <outlet property="featureTitleLabel" destination="9ch-wf-tDY" id="NRL-9H-7O6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mx-py-3L2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="-133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding" width="238" height="338"/>
+        <image name="onboarding_button" width="68" height="68"/>
+        <namedColor name="lowRiskBg">
+            <color red="0.76899999380111694" green="0.94900000095367432" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lowRiskMeter">
+            <color red="0.0" green="0.71799999475479126" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tg8-Zm-MsU"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2RI-g2-sCZ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Bold.ttf">
+            <string>DMSans-Bold</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Reported infection details-->
+        <scene sceneID="fye-Rg-XrN">
+            <objects>
+                <viewController storyboardIdentifier="SickViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uX7-aH-4CY" customClass="SickViewController" customModule="Covid19_Alert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfn-dj-3VD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="KcX-DD-fzM">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ojS-zd-IS8">
+                                        <rect key="frame" x="32" y="32" width="311" height="323"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add the date of your labatory diagnosis" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmA-Nb-Kaj">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2i-Hn-fkO">
+                                                <rect key="frame" x="0.0" y="10" width="311" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Ki3-l4-49a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="dd/mm/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-2j-fVu">
+                                                <rect key="frame" x="0.0" y="50" width="311" height="60"/>
+                                                <color key="backgroundColor" name="dashboardBoxBg"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="S8q-B2-OgR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a photo proof of your infection" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iC-CS-Wjk">
+                                                <rect key="frame" x="0.0" y="120" width="311" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="8Ju-nv-lsN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-Cy-dbQ">
+                                                <rect key="frame" x="0.0" y="160" width="311" height="153"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page-proofs" translatesAutoresizingMaskIntoConstraints="NO" id="h3h-GX-l25">
+                                                        <rect key="frame" x="0.0" y="0.0" width="115" height="153"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="h3h-GX-l25" secondAttribute="height" multiplier="1536:2048" id="J1S-29-vwR"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It could be document from hospital. Do not worry, you can hide sensitive data" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDw-AZ-ffl">
+                                                        <rect key="frame" x="125" y="0.0" width="186" height="153"/>
+                                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="h3h-GX-l25" firstAttribute="width" secondItem="SSd-Cy-dbQ" secondAttribute="width" multiplier="0.5" priority="750" id="jGq-6W-I5Z"/>
+                                                </constraints>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-M1-72o">
+                                                <rect key="frame" x="0.0" y="323" width="311" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-Gs-Nup">
+                                        <rect key="frame" x="32" y="387" width="311" height="60"/>
+                                        <color key="backgroundColor" name="buttonColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5rQ-IL-4si"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" name="buttonTextWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4R-H8-3qt">
+                                        <rect key="frame" x="32" y="479" width="311" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="QHv-KD-b2A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="18"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" name="buttonTextBlue"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="32" bottom="32" trailing="32"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KcX-DD-fzM" firstAttribute="leading" secondItem="ind-UQ-K6S" secondAttribute="leading" id="Afh-BM-a1W"/>
+                            <constraint firstItem="ind-UQ-K6S" firstAttribute="bottom" secondItem="KcX-DD-fzM" secondAttribute="bottom" id="PUD-I1-nqd"/>
+                            <constraint firstItem="ind-UQ-K6S" firstAttribute="trailing" secondItem="KcX-DD-fzM" secondAttribute="trailing" id="hbk-76-V32"/>
+                            <constraint firstItem="KcX-DD-fzM" firstAttribute="top" secondItem="ind-UQ-K6S" secondAttribute="top" id="wJm-Vu-yWK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ind-UQ-K6S"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reported infection details" largeTitleDisplayMode="always" id="zsc-Wa-9Vg"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="G4R-H8-3qt" id="Aht-2y-usJ"/>
+                        <outlet property="dateInputField" destination="cJe-2j-fVu" id="szQ-yi-7ch"/>
+                        <outlet property="dateLabel" destination="l2i-Hn-fkO" id="hch-IE-gVz"/>
+                        <outlet property="proofExplanationLabel" destination="rDw-AZ-ffl" id="Tx0-WH-mV3"/>
+                        <outlet property="proofImageView" destination="h3h-GX-l25" id="RgZ-Fn-Eys"/>
+                        <outlet property="proofLabel" destination="5iC-CS-Wjk" id="UOC-e4-9TS"/>
+                        <outlet property="reportInfectionLabel" destination="VmA-Nb-Kaj" id="AA4-6R-C7b"/>
+                        <outlet property="sendButton" destination="U4k-Gs-Nup" id="Nb5-w7-OBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGe-2F-qDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nq6-LA-rio">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2RI-g2-sCZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="l9m-Fx-3QF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uX7-aH-4CY" kind="relationship" relationship="rootViewController" id="3qI-il-PRC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xm9-jW-piU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="page-proofs" width="325" height="325"/>
+        <namedColor name="buttonColor">
+            <color red="0.29800000786781311" green="0.27099999785423279" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonTextBlue">
+            <color red="0.29800000786781311" green="0.27099999785423279" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonTextWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dashboardBoxBg">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

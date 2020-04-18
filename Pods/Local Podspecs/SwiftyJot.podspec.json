@@ -1,0 +1,30 @@
+{
+  "name": "SwiftyJot",
+  "version": "0.1.1",
+  "summary": "Annotate an image with the touch of a finger.",
+  "description": "Give your images the finger with SwiftyJot! Lightweight library lets users mark up a photo/image.\nOptions to allow user to select color and brush size. Multi-level undo and one level redo. Inspired\nby the (now abandoned) jot object-C library from IFTTT but all new code, 100% Swift.",
+  "homepage": "https://github.com/DavidLari/SwiftyJot",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DavidLari": "David@DavidLariStudios.com"
+  },
+  "source": {
+    "git": "https://github.com/DavidLari/SwiftyJot.git",
+    "tag": "0.1.1"
+  },
+  "social_media_url": "https://twitter.com/DavidLari",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SwiftyJot/Classes/**/*",
+  "resource_bundles": {
+    "SwiftyJot": [
+      "SwiftyJot/Assets/**/*.xcassets"
+    ]
+  },
+  "resources": "SwiftyJot/Assets/**/*.xcassets",
+  "frameworks": "UIKit"
+}

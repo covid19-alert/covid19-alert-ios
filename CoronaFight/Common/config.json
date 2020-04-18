@@ -1,0 +1,11 @@
+{
+  "onboarding": true,
+  "automaticRegistration": false,
+  "photoProof": true,
+  "reportButton": true,
+  "pushNotifications": true,
+  "storeCredentials": false,
+  "requireIntermediateInfoBeforeSelfCheck": true,
+  "displayShareButton": true,
+  "displaySelfAssessmentButton": true
+}

@@ -1,0 +1,174 @@
+/* Onboarding */
+
+"About Covid-19 Alert!" = "O Covid-19 Alert!";
+
+"This app warns about possible infection with Covid-19. We inform you when you have been near an infected person and provide you with important and useful information about the pandemic. This way you can help to delay the further spread of Covid-19." = "Aplikacja ostrzega o możliwej infekcji Covid-19. Poinformujemy Cię, gdy znajdziesz się w pobliżu zarażonej osoby, przekażemy ważne i przydatne informacje na temat pandemii. W ten sposób możesz pomóc w opóźnieniu dalszego rozprzestrzeniania się Covid-19.";
+
+"Secure & Anonymous" = "Bezpieczne & Anonimowe";
+
+"The Covid-19 Alert! app works with bluetooth data. It registers if your mobile phone has been near a mobile phone of an infected person who is using the app. This app also provides health authorities insight into the geographical spread of the virus. However, privacy is guaranteed: the use of the app is completely anonymous and it’s impossible to trace either you or your phone." = "Covid-19 Alert! używa danych Bluetooth. Rejestruje, czy Twój telefon komórkowy znajdował się w pobliżu telefonu komórkowego zainfekowanej osoby również korzystającej z aplikacji. Aplikacja zapewnia również organom ochrony zdrowia wgląd w geograficzne rozprzestrzenianie się wirusa. Prywatność jest jednak gwarantowana: korzystanie z aplikacji jest całkowicie anonimowe a danych nie można ich powiązać z Tobą ani z telefonem.";
+
+"What should you do?" = "Co dalej?";
+
+"Keep the app running in the background all the time and check it from time to time. In order to stay healthy, wash your hands, practice social distancing, don’t touch your face and #stayathome as much as possible." = "Utrzymuj aplikację działającą przez cały czas w tle i od czasu do czasu sprawdzaj. A co najważniejsze, myj ręce, zachowaj dystans w kontaktach z ludzmi, nie dotykaj twarzy i #ZostańWDomu.";
+
+/* Register */
+
+"Please accept to\ncontinue using the app" = "Zaakceptuj aby skorzystać z aplikacji";
+
+"I accept the privacy policy" = "Akceptuję Politykę Prywatności";
+
+"Enter" = "Wejdź do aplikacji";
+
+/* Dashboard */
+
+"Dashboard" = "Panel główny";
+
+"Low" = "Niskie";
+
+"High" = "Wysokie";
+
+"Report your infection" = "Zgłoś infekcję";
+
+"low risk" = "niskie ryzyko";
+
+"medium risk" = "średnie ryzyko";
+
+"high risk" = "wysokie ryzyko";
+
+"infected" = "zarażona/y";
+
+"You are infected" = "Jesteś \nzarażona/y";
+
+"You have a low risk of being infected" = "Masz niskie ryzyko infekcji";
+
+"You have a medium risk of being infected" = "Masz średnie ryzyko infekcji";
+
+"You have a high risk of being infected" = "Masz wysokie ryzyko infekcji";
+
+"Out of %d people met" = "spośród %d spotkanych osób";
+
+"people you've been in contact with are infected" = "osób z którymi miałeś kontakt są zainfekowane";
+
+"What can you do?" = "Co mogę zrobić?";
+
+"Run self assessment test" = "Uruchom test zdrowia";
+
+"Date of laboratory diagnosis" = "Data diagnozy laboratoryjnej";
+
+"Report your recovery" = "Zgłoś koniec infekcji";
+
+"I am using Covid-19 Alert to stop virus spreading. #stayAtHome" = "Używam Covid-19 Alert by zmniejszyć rozprzestrzeniania sie wirusa. #zostanWdomu";
+
+"Risk level update" = "Aktualizacja poziomu ryzyka";
+
+/* Report */
+
+"Infected people report" = "Szczegóły zgłoszonych infekcji";
+
+"User ID" = "ID użytkownika";
+
+"Less than meter" = "Mniej niż metr";
+
+"%d meter" = "%d metr";
+
+"%d meters" = "%d metry";
+
+"Less than minute" = "Mniej niż minutę";
+
+"%d minute" = "%d minutę";
+
+"%d minutes" = "%d minuty";
+
+"You are safe" = "Jesteś bezpieczna/y";
+
+"It looks like you haven't had contact with an infected person. Keep it up!" = "Wygląda na to, że nie Twoje urządzenie nie miało kontaktu z urządzeniem osoby zarażonej. Tak trzymaj!";
+
+/* Report sickness from deeplink*/
+
+"Infection report" = "Zgłaszanie infekcji";
+
+"You are confirming to be tested on SARS-CoV-2 with positive result" = "Potwierdzam wykonanie testu na obecność SARS-CoV-2 z pozywytnym wynikiem";
+
+"Reported" = "Zgłoszono";
+
+"Yes" = "Tak";
+
+"No" = "Nie";
+
+/* Report sickness */
+
+"Reported infection details" = "Szczegóły zgłaszanej infekcji";
+
+"Time" = "Godzina";
+
+"Cancel" = "Anuluj";
+
+"Confirm" = "Potwierdź";
+
+"hh:mm" = "gg:mm";
+
+"Add the date of your labatory diagnosis" = "Dodaj datę diagnozy laboratoryjnej";
+
+"dd/mm/yyyy" = "dd/mm/rrrr";
+
+"Date" = "Data";
+
+"Camera" = "Kamera";
+
+"Photo library" = "Biblioteka zdjęć";
+
+"Add a photo proof of your infection" = "Dodaj zdjęcie potwierdzające zarażenie";
+
+"It could be document from hospital. Do not worry, you can hide sensitive data" = "Może to być wypis ze szpitala. Nie martw się, będzie możliwość usunięcia wrażliwych danych w następnym kroku";
+
+"Hide sensitive data if you want" = "Ukryj prywatne dane";
+
+/* Report recovery */
+
+"Recovery report" = "Zgłaszanie końca infekcji";
+
+"You are confirming that your body has no longer presence of SARS-CoV-2" = "Czy potwierdzasz brak obecności w Twoim organiźmie SARS-CoV-2?";
+
+"Wonderful!" = "Wspaniale!";
+
+"recovered" = "zdrowa/y";
+
+"You are recovered" = "Jesteś zdrowa/y";
+
+/* Permission */
+
+"Covid-19 Alert needs " = "Covid-19 Alert potrzebuje ";
+
+"location permission" = "dostępu do lokalizacji";
+
+"Bluetooth to be turned on" = "by Bluetooth był włączony";
+
+"Bluetooth permission" = " dostępu do Bluetooth";
+
+" and " = " oraz ";
+
+" to work correctly. Open settings to adjust." = " do działania poprawnie. Otwórz Ustawienia by to zmienić.";
+
+/* Error handling */
+
+"Code was already used" = "Kod już został użyty";
+
+"Wrong response code: %d" = "Zły kod odpowiedzi: %d";
+
+"No authorization data" = "Brak danych autoryzacyjnych";
+
+"Something went wrong.." = "Coś poszło nie tak..";
+
+
+/* Self assesment intermediate info screen header. */
+"Self-assesment information" = "Informacje o teście zdrowia";
+
+/* Self assesment intermediate info screem bold note header. */
+"Note" = "Ważne";
+
+/* Self assesment intermediate info screem note content. */
+"Result of self-assessment won't influence Risk measurement" = "Test zdrowia nie wpływa na wskazania licznika ryzyka.";
+
+/* No comment provided by engineer. */
+"Continue" = "Kontynuuj";
